@@ -80,7 +80,7 @@ def my_generate_move_group_launch(ld, moveit_config):
         parameters=move_group_params,
         extra_debug_args=["--debug"],
         # Set the display variable, in case OpenGL code is used internally
-        additional_env={"DISPLAY": ":0"},
+        additional_env={"DISPLAY": ":1"},
     )
     return ld
 
