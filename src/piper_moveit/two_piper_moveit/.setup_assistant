@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: piper_description
+    relative_path: urdf/two_piper_description.xacro
+  srdf:
+    relative_path: config/two_piper.srdf
+  package_settings:
+    author_name: lhddw02
+    author_email: lhddw02
+    generated_timestamp: 1740382720
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

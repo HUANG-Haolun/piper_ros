@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="two_piper">
+    <xacro:arg name="two_initial_positions_file" default="$(find two_piper_moveit)/config/two_piper_initial_positions.yaml" />
+
+    <!-- Import piper urdf file -->
+    <xacro:include filename="$(find piper_description)/urdf/two_piper_description.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="two_piper.ros2_control.xacro" />
+
+    <xacro:piper_ros2_control name="FakeSystem" two_piper_initial_positions_file="$(arg two_initial_positions_file)"/>
+
+</robot>

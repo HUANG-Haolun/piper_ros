@@ -1,0 +1,111 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 500  # Hz
+
+    left_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    left_gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    left_gripper8_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    
+
+    right_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    right_gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    right_gripper8_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      joints:
+        - left_joint1
+        - left_joint2
+        - left_joint3
+        - left_joint4
+        - left_joint5
+        - left_joint6
+        - right_joint1
+        - right_joint2
+        - right_joint3
+        - right_joint4
+        - right_joint5
+        - right_joint6
+
+# Left arm controller
+left_arm_controller:
+  ros__parameters:
+    joints:
+      - left_joint1
+      - left_joint2
+      - left_joint3
+      - left_joint4
+      - left_joint5
+      - left_joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+left_gripper_controller:
+  ros__parameters:
+    joints:
+      - left_joint7
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+left_gripper8_controller:
+  ros__parameters:
+    joints:
+      - left_joint8
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+# Right arm controller
+right_arm_controller:
+  ros__parameters:
+    joints:
+      - right_joint1
+      - right_joint2
+      - right_joint3
+      - right_joint4
+      - right_joint5
+      - right_joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+right_gripper_controller:
+  ros__parameters:
+    joints:
+      - right_joint7
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+right_gripper8_controller:
+  ros__parameters:
+    joints:
+      - right_joint8
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
